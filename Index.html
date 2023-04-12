@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AlphaGames</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<header>
+		<h1> <b> Alpha </b>  <img src="./images/alpha00.png" alt="Alpha" height="50px" width="50px"> <i> Games </i></h1>
+	</header>
+	<script>
+
+		function showEmail() {
+			var email = document.getElementById('email-link').href;
+			alert(email);
+			return false;
+		}
+		
+		function searchGames() {
+			var query = document.querySelector('input[name="search"]').value.toLowerCase();
+			var games = document.querySelectorAll('.game');
+			
+			for (var i = 0; i < games.length; i++) {
+				var description = games[i].getAttribute('data-description').toLowerCase();
+				
+				if (description.indexOf(query) !== -1) {
+					games[i].style.display = 'block';
+				} else {
+					games[i].style.display = 'none';
+				}
+			}
+			
+			return false;
+		}
+		
+	</script>
+
+	<nav>
+		<ul>
+			<li class="dropdown">
+				<a href="#">Magazin &#9662;</a>
+				<div class="dropdown-content">
+					<a href="#">Merch</a> <br> <br>
+					<a href="#">Accesorii</a> <br> <br>
+					<a href="#">Custom Build</a> <br> <br>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="#">Companii Partener &#9662;</a>
+				<div class="dropdown-content">
+					<a href="#">Parteneri Primari</a> <br> <br>
+					<a href="#">Parteneri Secundari</a> <br> <br>
+					<a href="#">Parteneri Tertiari</a> <br> <br>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="#">Contact &#9662;</a>
+				<div class="dropdown-content">
+					<a href="#" onclick="alert('alpha.games@email.com')">Email</a>  <br> <br>
+					<a href="#" onclick="alert('0639 23 435')">Telefon</a> <br> <br>
+					<a href="#" onclick="alert('USA/Now York/St.Freedoom/N69')">Adresa</a> <br> <br>
+				</div>
+			</li>
+			<li>
+				<form onsubmit="return searchGames()">
+					<input type="text" name="search" placeholder="Search...">
+					<button type="submit">Go</button>
+				</form>
+			</li>
+		</ul>
+	</nav>
+	
+
+	<main>
+		<aside>
+			<h2>Sign in</h2>
+              <form>
+                 <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required> <br> <br>
+
+                 <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required> <br> <br>
+
+                 <button type="submit">Sign in</button>
+               </form>
+		    <h2>Jocuri Disponibile: </h2>
+			<img src="./images/j1.jpg" width="80px" height="80px" class="game" data-description="GTA V"> 
+			<img src="./images/j2.jpg" width="80px" height="80px" class="game" data-description="Jumanji">  
+			<img src="./images/j3.jpg" width="80px" height="80px" class="game" data-description="Minecraft">
+			<img src="./images/j4.jpg" width="80px" height="80px" class="game" data-description="Sims 4"> 
+			<img src="./images/j5.jpg" width="80px" height="80px" class="game" data-description="Dead by Daylight"> 
+			<img src="./images/j6.jpg" width="80px" height="80px" class="game" data-description="Cities Skylines">
+			<img src="./images/j7.jpg" width="80px" height="80px" class="game" data-description="GTA SanAndreas"> 
+			<img src="./images/j8.jpg" width="80px" height="80px" class="game" data-description="Zelda">
+			<img src="./images/j9.jpg" width="80px" height="80px" class="game" data-description="HALO"> 
+			<img src="./images/j10.jpg" width="80px" height="80px" class="game" data-description="Half-Life 2">
+			<img src="./images/j11.jpg" width="80px" height="80px" class="game" data-description="Mass Efect 2">
+			<img src="./images/j12.jpg" width="80px" height="80px" class="game" data-description="Rezident Evil 4">
+			<img src="./images/j13.jpg" width="80px" height="80px" class="game" data-description="Red Dead Redemtion 2"> 
+			<img src="./images/j14.jpg" width="80px" height="80px" class="game" data-description="The last of us">
+			<img src="./images/j15.jpg" width="80px" height="80px" class="game" data-description="Protal 2"> 
+			<img src="./images/j16.jpg" width="80px" height="80px" class="game" data-description="Batman">
+			<img src="./images/j17.jpg" width="80px" height="80px" class="game" data-description="BioShock"> 
+			<img src="./images/j18.jpg" width="80px" height="80px" class="game" data-description="Metroid">
+			<img src="./images/j19.jpg" width="80px" height="80px" class="game" data-description="God Of War"> 
+			<img src="./images/j20.jpg" width="80px" height="80px" class="game" data-description="God Of War Ragnarok">
+			<img src="./images/j21.jpg" width="80px" height="80px" class="game" data-description="Skyrim"> 
+			<img src="./images/j22.jfif" width="80px" height="80px" class="game" data-description="Overwatch">
+			<img src="./images/j23.jfif" width="80px" height="80px" class="game" data-description="Mario"> 
+			<img src="./images/j24.jfif" width="80px" height="80px" class="game" data-description="Little Big Planer">
+			<td><button class="cart-btn">Joaca</button></td>
+		</aside>
+
+		<section>
+			<h2>Despre:</h2>
+			
+			<p> AlphaGames este un site dedicat gamingului in cloud, care ofera utilizatorilor acces la o varietate de jocuri populare direct de pe platforma online. 
+				Fie ca esti un jucator inrait sau un incepator pasionat, AlphaGames este locul perfect pentru a-ti satisface nevoia de distractie si relaxare. <br> <br>
+
+			    Cu AlphaGames, nu mai trebuie sa-ti faci griji in legatura cu instalarea si actualizarea jocurilor sau cu problemele de performanta ale computerului. 
+				Tot ce ai nevoie este o conexiune stabila la internet si un abonament la serviciul nostru, iar restul se va desfasura fara probleme. Poti juca jocurile 
+				tale preferate la viteza maxima, fara sa-ti ocupi spatiul pe hard disk si fara sa-ti pui la incercare procesorul sau placa video. <br> <br>
+				
+				Pe AlphaGames vei gasi o gama larga de jocuri de la cele mai populare titluri pana la cele mai noi lansari. Cu doar cateva click-uri, 
+				poti explora o lume vasta de aventuri si experiente, de la jocuri de actiune si RPG-uri, la jocuri de sport si strategie. Indiferent de 
+				preferintele tale, AlphaGames are ceva pentru fiecare tip de jucator. <br> <br>
+			</p>
+            
+		    <h2>Lasa un Review</h2>
+			<div class="review-form">
+				<iframe src="https://epicglobalgroup.net/leave-a-review/" width="100%" height="600px"></iframe>
+			</div>
+		
+		</section>
+	</main>
+
+	<footer>
+		<p>Copyright © AlphaGames 2023
+		<br>All rights reserved.</p>
+	</footer>
+
+</body>
+</html>
